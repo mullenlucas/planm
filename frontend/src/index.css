@@ -1,13 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(250, 249, 228);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
+}
+
+/* Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(16, 63, 0);
+  height: 56px;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(16, 63, 0);
+  color: rgb(250, 249, 228);
+}
+
+/* Common */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: coral;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 1rem;
+  background-color: rgba(114, 229, 255, 0.6);
+  border: 0.1rem #a4a4a4 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-size: 1.6rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(235, 235, 235);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button:hover {
+  border: 0.1rem rgb(119, 95, 0) solid;
+}
+button.primary {
+  background-color: rgb(211, 211, 200);
+}
+button.block {
+  width: 100%;
+}
+
+/* Header */
+header a {
+  color: rgb(250, 249, 228);
+  padding: 1rem;
+}
+.logobrand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+img.large {
+  width: 100%;
+}
+
+/* Card */
+.card {
+  border: 0.1rem rgba(0, 172, 6, 0.8) solid;
+  background-color: rgb(250, 246, 162);
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body {
+  padding: 1rem;
+}
+/* This next line means all direct childs of card-body: */
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+/* Rating */
+.rating span {
+  color: rgb(194, 155, 0);
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: rgb(1, 4, 0);
+}
+
+/* Alert */
+.instock {
+  color: #20a020;
+}
+.nostock {
+  color: #a02020;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1 rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info {
+  color: tomato;
+  background-color: thistle;
+}
+.alert-dngrmsg {
+  color: rgb(0, 122, 138);
+  background-color: thistle;
 }
