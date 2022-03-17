@@ -14,39 +14,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.site-container {
+  min-height: 100vh;
+}
 #root {
   height: 100%;
 }
 
-/* Layout */
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'main'
-    'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
-  height: 100%;
-}
-
-header {
-  grid-area: header;
-  background-color: rgb(16, 63, 0);
-  height: 56px;
-}
 main {
-  grid-area: main;
-  padding: 1rem;
+  flex: 1;
 }
-footer {
-  grid-area: footer;
+.addtocart {
+  background-color: rgb(22, 87, 0);
+  float: right;
+}
+.footy-c {
   background-color: rgb(16, 63, 0);
   color: rgb(250, 249, 228);
 }
-
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -71,7 +56,7 @@ li {
   margin-top: 1rem;
 }
 
-button {
+/* button {
   padding: 1rem;
   background-color: rgba(114, 229, 255, 0.6);
   border: 0.1rem #a4a4a4 solid;
@@ -92,46 +77,14 @@ button.primary {
 }
 button.block {
   width: 100%;
+} */
+.color-nav {
+  background-color: rgb(16, 63, 0);
 }
-
-/* Header */
-header a {
-  color: rgb(250, 249, 228);
-  padding: 1rem;
-}
-.logobrand {
+.brand-style {
   font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  cursor: pointer;
-}
-
-.nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-.nav-links li a {
-  transition: all 0.3s ease 0s;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 20px;
-}
-.row.center {
-  justify-content: center;
-}
-.row.top {
-  align-items: flex-start;
-}
-.col-1 {
-  flex: 1 1 25rem;
-}
-.col-2 {
-  flex: 2 1 50rem;
 }
 
 /* Image */
@@ -148,14 +101,12 @@ img.large {
 
 /* Card */
 .card {
-  border: 0.1rem rgba(0, 172, 6, 0.8) solid;
-  background-color: rgb(250, 246, 162);
+  border: 0.1rem rgba(0, 124, 4, 0.8) solid;
+  background-color: rgb(255, 252, 213);
   border-radius: 0.5rem;
   margin: 1rem;
 }
-.card-body {
-  padding: 1rem;
-}
+
 /* This next line means all direct childs of card-body: */
 .card-body > * {
   margin-bottom: 0.5rem;
@@ -166,10 +117,6 @@ img.large {
 /* Rating */
 .rating span {
   color: rgb(194, 155, 0);
-  margin: 0.1rem;
-}
-.rating span:last-child {
-  color: rgb(1, 4, 0);
 }
 
 /* Alert */
