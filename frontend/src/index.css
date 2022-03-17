@@ -158,3 +158,11 @@ img.large {
 .product-info {
   padding: 1rem;
 }
+
+.img-focus {
+  max-width: 560px;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
