@@ -1,8 +1,8 @@
-import data from './data';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import CartScreen from './screens/CartScreen';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+// import CartScreen from './screens/CartScreen';
 import ProductScreen from './screens/ProductScreen';
 import LandingScreen from './screens/LandingScreen';
+// Link is used instead of a in order to make pages NOT reaload, but the same one
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <section className="grid-container">
         <header className="row">
           <div className="logobrand">
-            <a href="/">planM!</a>
+            <Link to="/">planM!</Link>
           </div>
           <nav>
             <ul className="nav-links">
@@ -32,26 +32,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<LandingScreen />}></Route>
+            <Route path="/product/:slug" element={<ProductScreen />}></Route>
           </Routes>
-          <h1>Featured Prods:</h1>
-          <div className="products">
-            {data.products.map((product) => (
-              <div className="product" key={product.slug}>
-                <a href={`/product/${product.slug}`}>
-                  <img src={product.image} alt={product.name} />
-                </a>
-                <div className="product-info">
-                  <a href={`/product/${product.slug}`}>
-                    <p>{product.name}</p>
-                  </a>
-                  <p>
-                    <strong>${product.price}</strong>
-                  </p>
-                  <button>Add to cart</button>
-                </div>
-              </div>
-            ))}
-          </div>
         </main>
         <footer className="row center">All rights reserved</footer>
       </section>
