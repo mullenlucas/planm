@@ -1,3 +1,7 @@
+## Check the folder product/images/...
+
+They shouldn't be needed, but it does't read from /images/...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

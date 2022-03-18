@@ -1,7 +1,24 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Luqui',
+      email: 'mullenlucas@hotmail.com.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Wuwi',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
+
   products: [
     {
-      _id: '1',
+      // _id: '1',
       name: 'Stylistic flame',
       category: 'Flames',
       slug: 'styled-flames',
@@ -14,7 +31,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
+      // _id: '2',
       name: 'Stylistic gem',
       category: 'Gems',
       slug: 'styled-gems',
@@ -27,7 +44,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+      // _id: '3',
       name: 'Quartz flame',
       category: 'Flames',
       slug: 'quartz-flame',
@@ -40,7 +57,7 @@ const data = {
       description: 'high quality product of course',
     },
     {
-      _id: '4',
+      // _id: '4',
       name: 'Titanium blue flame',
       category: 'Flames',
       slug: 'blue-flames',
@@ -53,7 +70,7 @@ const data = {
       description: 'the smithing of these flames, oh boii',
     },
     {
-      _id: '5',
+      // _id: '5',
       name: 'Jurassic coral',
       category: 'Corals',
       slug: 'jurassic-coral',
@@ -66,7 +83,7 @@ const data = {
       description: 'oh men this shit is legit, where do we even get this',
     },
     {
-      _id: '6',
+      // _id: '6',
       name: 'Mesozoic coral',
       category: 'Corals',
       image: 'images/p6.jpg',
