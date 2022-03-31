@@ -80,10 +80,15 @@ button.block {
 } */
 .color-nav {
   background-color: rgb(16, 63, 0);
+  outline-color: rgb(16, 63, 0);
 }
 .brand-style {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.text-bold {
   font-weight: bold;
 }
 
@@ -176,6 +181,38 @@ img.large {
   color: #a0a0a0;
 }
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #f08000;
-  color: #f08000;
+  border-bottom: 0.2rem solid #f04400;
+  color: rgb(16, 63, 0);
+}
+
+.floatrightembtns {
+  float: right;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: rgb(16, 63, 0);
+}
+
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
 }
